@@ -45,6 +45,28 @@
 			]
 		},
 		{
+			"SubEntityOperation": [
+				"aa84cadb5505f9dc",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_UseableCondition",
+						"value": "cafeb375236be1ae"
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"aa84cadb5505f9dc",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_Condition",
+						"value": "cafeb375236be1ae"
+					}
+				}
+			]
+		},
+		{
 			"AddEntity": [
 				"cafe98135d0e1f7a",
 				{
@@ -546,6 +568,24 @@
 							"In": ["ac0779db9e0d7bc9"],
 							"DEBUG_ExitSafeZone": ["9e6b2057c759fee0"],
 							"Trigger": ["726f9558ba0def71"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeb375236be1ae",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "Operation Letterbomb",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_aValues": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["106a09f4918b684f", "a5bc5abb43d29576", "faf00c8d8c7aef46", "cafe03493ea6d9bd"],
+							"postInit": true
 						}
 					}
 				}
