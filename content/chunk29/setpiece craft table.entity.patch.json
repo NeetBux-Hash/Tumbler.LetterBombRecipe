@@ -408,8 +408,14 @@
 				{
 					"parent": "ebec872528e79fc6",
 					"name": "VB_NoNewspaper_Added",
-					"factory": "[modules:/zentity.class].pc_entitytype",
-					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+					"factory": "[modules:/zinvertedcondition.class].pc_entitytype",
+					"blueprint": "[modules:/zinvertedcondition.class].pc_entityblueprint",
+					"properties": {
+						"m_rCondition": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe2904e6baf998"
+						}
+					}
 				}
 			]
 		},
