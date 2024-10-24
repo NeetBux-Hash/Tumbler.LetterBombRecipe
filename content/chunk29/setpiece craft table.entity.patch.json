@@ -616,7 +616,14 @@
 			"AddComment": {
 				"parent": "ebec872528e79fc6",
 				"name": "Notes",
-				"text": "No clue how inputcopying works or where the name comes from"
+				"text": "No clue how inputcopying works or where the name comes from\n\nSPACEBAR IS LEAVE IS RIGHT"
+			}
+		},
+		{
+			"AddComment": {
+				"parent": "9e6b2057c759fee0",
+				"name": "Notes",
+				"text": "Need to add button here?\nSee blueprint references bc sound05 cant be done apparently ask gpt\n"
 			}
 		}
 	],
