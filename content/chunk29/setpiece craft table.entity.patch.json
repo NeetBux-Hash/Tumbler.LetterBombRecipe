@@ -3,11 +3,45 @@
 	"tbluHash": "00A3230B62CEBFF8",
 	"patch": [
 		{
+			"SubEntityOperation": [
+				"9e6b2057c759fee0",
+				{
+					"PatchArrayPropertyValue": [
+						"m_aInputListeners",
+						[
+							{
+								"AddItemAfter": ["aa84cadb5505f9dc", "cafef13d8bffa123"]
+							},
+							{
+								"AddItemAfter": ["aa84cadb5505f9dc", "cafe021b5dd49dfe"]
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"9e6b2057c759fee0",
+				{
+					"AddEventConnection": ["SoundEvent04", "Send", "cafe3e2a1efddbd7"]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"9e6b2057c759fee0",
+				{
+					"AddEventConnection": ["ObjectEvent05", "DetachAndHide", "cafe9d28008b2262"]
+				}
+			]
+		},
+		{
 			"AddEntity": [
 				"cafe98135d0e1f7a",
 				{
 					"parent": "ebec872528e79fc6",
-					"name": "accessoryitem_newspaper_rolled_a",
+					"name": "accessoryitem_newspaper_rolled_A",
 					"factory": "[assembly:/_pro/items/templates/accessories/newspapers_a.template?/accessoryitem_newspaper_rolled_a.entitytemplate].pc_entitytype",
 					"blueprint": "[assembly:/_pro/items/templates/accessories/newspapers_a.template?/accessoryitem_newspaper_rolled_a.entitytemplate].pc_entityblueprint",
 					"properties": {
@@ -58,7 +92,7 @@
 				"cafe3a0f8719f8ce",
 				{
 					"parent": "ebec872528e79fc6",
-					"name": "Keyword Newspaper",
+					"name": "Keyword_ITEM_ Newspaper",
 					"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_newspaperroll.entitytemplate].pc_entitytype",
 					"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_newspaperroll.entitytemplate].pc_entityblueprint"
 				}
@@ -120,8 +154,367 @@
 				{
 					"parent": "ebec872528e79fc6",
 					"name": "Input_Newspaper",
+					"factory": "[modules:/zinputlistenerbuttonentity.class].pc_entitytype",
+					"blueprint": "[modules:/zinputlistenerbuttonentity.class].pc_entityblueprint",
+					"properties": {
+						"m_sPromptText": {
+							"type": "ZString",
+							"value": "Add Newspaper"
+						},
+						"m_eButton": {
+							"type": "ZInputListenerButtonEntity.eInputListenerButtons",
+							"value": "EILB_RIGHT"
+						},
+						"m_rPromptTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces.sweetmenutext?/setpieces_localization_prompt_add.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_sPromptDescriptionText": {
+							"type": "ZString",
+							"value": ""
+						},
+						"m_rPromptDescriptionTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "00754164A58523E2",
+								"flag": "5F"
+							}
+						},
+						"m_ConditionsOnGet": {
+							"type": "bool",
+							"value": false
+						},
+						"m_VisibleCondition": {
+							"type": "SEntityTemplateReference",
+							"value": "74f5e2ac425a03e3"
+						},
+						"m_bUseOrientedPrompts": {
+							"type": "bool",
+							"value": true
+						},
+						"m_UseableCondition": {
+							"type": "SEntityTemplateReference",
+							"value": "b28dd5e095995c2b",
+							"postInit": true
+						},
+						"m_Condition": {
+							"type": "SEntityTemplateReference",
+							"value": "b28dd5e095995c2b",
+							"postInit": true
+						},
+						"m_rVROverrideSpatial": {
+							"type": "SEntityTemplateReference",
+							"value": "1726bba3bd4fd992",
+							"postInit": true
+						}
+					},
+					"events": {
+						"OnPressed": {
+							"ConsumeFromInventory": ["cafe9d28008b2262"],
+							"SetTrue": ["faf00c8d8c7aef46"],
+							"Request": ["cafe89d375bb6c31"],
+							"Send": ["34443d8bad0e8b3f"],
+							"SetFalse": ["106a09f4918b684f"],
+							"Trigger": ["726f9558ba0def71"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe5aec24753be8",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "ItemKey_LetterBomb",
+					"factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+					"blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+					"properties": {
+						"m_RepositoryId": {
+							"type": "ZGuid",
+							"value": "30fa1ade-386f-49b7-bddd-a23cd912611d"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe572e5ab046d7",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "ItemSpawner2",
+					"factory": "[modules:/zitemspawner.class].pc_entitytype",
+					"blueprint": "[modules:/zitemspawner.class].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": -0.0,
+									"y": 0.0,
+									"z": 174.35007848002385
+								},
+								"position": {
+									"x": 0.2609120011329651,
+									"y": -0.1719440072774887,
+									"z": 1.0568740367889404
+								}
+							}
+						},
+						"m_bSpawnOnStart": {
+							"type": "bool",
+							"value": false
+						},
+						"m_rMainItemKey": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe5aec24753be8"
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "ebec872528e79fc6",
+							"postInit": true
+						}
+					},
+					"events": {
+						"ItemReady": { "SetTrue": ["cc30b45809baeab7"] },
+						"OnPickup": { "SetFalse": ["cc30b45809baeab7"] },
+						"OnItemDestroyed": {
+							"SetFalse": ["cc30b45809baeab7"]
+						},
+						"ItemShot": { "SetFalse": ["cc30b45809baeab7"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe89d375bb6c31",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "SafezoneNetworkRequestEntity_Use Newspaper",
+					"factory": "[modules:/zsafezonenetworkrequestentity.class].pc_entitytype",
+					"blueprint": "[modules:/zsafezonenetworkrequestentity.class].pc_entityblueprint",
+					"properties": {
+						"m_sRequest": {
+							"type": "ZString",
+							"value": "Use_Newspaper"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe3e2a1efddbd7",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "play_fol_crafting_newspaper",
+					"factory": "[modules:/zaudioevententity.class].pc_entitytype",
+					"blueprint": "[modules:/zaudioevententity.class].pc_entityblueprint",
+					"properties": {
+						"m_pMainEvent": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "00C9BA07AB2B5716",
+								"flag": "5F"
+							}
+						},
+						"m_pEmitter": {
+							"type": "SEntityTemplateReference",
+							"value": "62ae7830b8f0931b"
+						},
+						"m_eCullingBehavior": {
+							"type": "AudioEventCullingBehavior",
+							"value": "NoAutoSendStop"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeb0fd7ddcd8a2",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "TokenPickedUpOrThrownAway 3",
+					"factory": "[modules:/zheroitemcondition.class].pc_entitytype",
+					"blueprint": "[modules:/zheroitemcondition.class].pc_entityblueprint",
+					"properties": {
+						"m_rKeywords": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe3a0f8719f8ce"
+						},
+						"m_bCheckEquippedItem": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bCheckInventory": {
+							"type": "bool",
+							"value": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe96f32c717a6d",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "VB_NewspaperNotAdded_PlayerHasNewspaper_Usable",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_aValues": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafeb0fd7ddcd8a2", "cafe8fde5ccaced1"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe8fde5ccaced1",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "Visible 4",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_aValues": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["106a09f4918b684f", "cafe03493ea6d9bd", "eb58d275af5911dc"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe03493ea6d9bd",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "VB_NoNewspaper_Added",
 					"factory": "[modules:/zentity.class].pc_entitytype",
 					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe2904e6baf998",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "VB_Newspaper_Added",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafef6787344544e",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "Visible 5",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_aValues": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["106a09f4918b684f", "a5bc5abb43d29576", "faf00c8d8c7aef46", "cafe2904e6baf998"],
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafef13d8bffa123",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "Input_Craft_LetterBomb",
+					"factory": "[modules:/zinputlistenerbuttonentity.class].pc_entitytype",
+					"blueprint": "[modules:/zinputlistenerbuttonentity.class].pc_entityblueprint",
+					"properties": {
+						"m_sPromptText": {
+							"type": "ZString",
+							"value": "Craft explosive"
+						},
+						"m_eButton": {
+							"type": "ZInputListenerButtonEntity.eInputListenerButtons",
+							"value": "EILB_DOWN"
+						},
+						"m_rPromptTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/setpieces.sweetmenutext?/setpieces_localization_prompt_craftexplosive.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						},
+						"m_UseableCondition": {
+							"type": "SEntityTemplateReference",
+							"value": "cafef6787344544e"
+						},
+						"m_sPromptDescriptionText": {
+							"type": "ZString",
+							"value": ""
+						},
+						"m_Condition": {
+							"type": "SEntityTemplateReference",
+							"value": "cafef6787344544e"
+						},
+						"m_rPromptDescriptionTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": null
+						},
+						"m_ConditionsOnGet": {
+							"type": "bool",
+							"value": false
+						},
+						"m_VisibleCondition": {
+							"type": "SEntityTemplateReference",
+							"value": "cafef6787344544e"
+						},
+						"m_rVROverrideSpatial": {
+							"type": "SEntityTemplateReference",
+							"value": "1726bba3bd4fd992"
+						},
+						"m_bUseOrientedPrompts": {
+							"type": "bool",
+							"value": true
+						}
+					},
+					"events": {
+						"OnPressed": {
+							"SetFalse": ["a5bc5abb43d29576", "faf00c8d8c7aef46", "cafe2904e6baf998", "106a09f4918b684f"],
+							"Request": ["c088b2bab120b544"],
+							"Send": ["34443d8bad0e8b3f"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafea0f093ab3dda",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "SafeZoneNetworkRequestEntity _ Assemble Bomb 2",
+					"factory": "[modules:/zsafezonenetworkrequestentity.class].pc_entitytype",
+					"blueprint": "[modules:/zsafezonenetworkrequestentity.class].pc_entityblueprint",
+					"properties": {
+						"m_sRequest": {
+							"type": "ZString",
+							"value": "AssembleBomb"
+						}
+					}
 				}
 			]
 		},
@@ -130,6 +523,20 @@
 				"parent": "cc30b45809baeab7",
 				"name": "Notes",
 				"text": "Look here too and blueorint "
+			}
+		},
+		{
+			"AddComment": {
+				"parent": "cafee17967eeda60",
+				"name": "Notes",
+				"text": "remind to edit position on table here"
+			}
+		},
+		{
+			"AddComment": {
+				"parent": "cafef13d8bffa123",
+				"name": "Notes",
+				"text": "Need new Prompttext resource. ADD localisedline"
 			}
 		}
 	],
