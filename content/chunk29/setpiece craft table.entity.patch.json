@@ -37,6 +37,14 @@
 			]
 		},
 		{
+			"SubEntityOperation": [
+				"ebec872528e79fc6",
+				{
+					"AddInputCopyConnection": ["SpawnExplosive", "SpawnItem", "cafe572e5ab046d7"]
+				}
+			]
+		},
+		{
 			"AddEntity": [
 				"cafe98135d0e1f7a",
 				{
@@ -153,7 +161,7 @@
 				"cafe021b5dd49dfe",
 				{
 					"parent": "ebec872528e79fc6",
-					"name": "Input_Newspaper",
+					"name": "Input_AddNewspaper",
 					"factory": "[modules:/zinputlistenerbuttonentity.class].pc_entitytype",
 					"blueprint": "[modules:/zinputlistenerbuttonentity.class].pc_entityblueprint",
 					"properties": {
@@ -189,7 +197,7 @@
 						},
 						"m_VisibleCondition": {
 							"type": "SEntityTemplateReference",
-							"value": "74f5e2ac425a03e3"
+							"value": "cafe8fde5ccaced1"
 						},
 						"m_bUseOrientedPrompts": {
 							"type": "bool",
@@ -197,12 +205,12 @@
 						},
 						"m_UseableCondition": {
 							"type": "SEntityTemplateReference",
-							"value": "b28dd5e095995c2b",
+							"value": "cafe96f32c717a6d",
 							"postInit": true
 						},
 						"m_Condition": {
 							"type": "SEntityTemplateReference",
-							"value": "b28dd5e095995c2b",
+							"value": "cafe96f32c717a6d",
 							"postInit": true
 						},
 						"m_rVROverrideSpatial": {
@@ -214,7 +222,7 @@
 					"events": {
 						"OnPressed": {
 							"ConsumeFromInventory": ["cafe9d28008b2262"],
-							"SetTrue": ["faf00c8d8c7aef46"],
+							"SetTrue": ["cafe2904e6baf998"],
 							"Request": ["cafe89d375bb6c31"],
 							"Send": ["34443d8bad0e8b3f"],
 							"SetFalse": ["106a09f4918b684f"],
@@ -494,7 +502,7 @@
 					"events": {
 						"OnPressed": {
 							"SetFalse": ["a5bc5abb43d29576", "faf00c8d8c7aef46", "cafe2904e6baf998", "106a09f4918b684f"],
-							"Request": ["c088b2bab120b544"],
+							"Request": ["cafea0f093ab3dda"],
 							"Send": ["34443d8bad0e8b3f"]
 						}
 					}
@@ -519,6 +527,25 @@
 			]
 		},
 		{
+			"AddEntity": [
+				"cafee9f46bba07be",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "CraftEvent2",
+					"factory": "[modules:/zsignalpipeentity_void.class].pc_entitytype",
+					"blueprint": "[modules:/zsignalpipeentity_void.class].pc_entityblueprint",
+					"events": {
+						"Out": {
+							"SpawnItem": ["cafe572e5ab046d7"],
+							"In": ["ac0779db9e0d7bc9"],
+							"DEBUG_ExitSafeZone": ["9e6b2057c759fee0"],
+							"Trigger": ["726f9558ba0def71"]
+						}
+					}
+				}
+			]
+		},
+		{
 			"AddComment": {
 				"parent": "cc30b45809baeab7",
 				"name": "Notes",
@@ -537,6 +564,13 @@
 				"parent": "cafef13d8bffa123",
 				"name": "Notes",
 				"text": "Need new Prompttext resource. ADD localisedline"
+			}
+		},
+		{
+			"AddComment": {
+				"parent": "ebec872528e79fc6",
+				"name": "Notes",
+				"text": "No clue how inputcopying works or where the name comes from"
 			}
 		}
 	],
