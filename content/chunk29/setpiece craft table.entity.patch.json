@@ -1,0 +1,137 @@
+{
+	"tempHash": "0005A61DC507DA77",
+	"tbluHash": "00A3230B62CEBFF8",
+	"patch": [
+		{
+			"AddEntity": [
+				"cafe98135d0e1f7a",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "accessoryitem_newspaper_rolled_a",
+					"factory": "[assembly:/_pro/items/templates/accessories/newspapers_a.template?/accessoryitem_newspaper_rolled_a.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/items/templates/accessories/newspapers_a.template?/accessoryitem_newspaper_rolled_a.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_bVisibleOnStartup": {
+							"type": "bool",
+							"value": false
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "ebec872528e79fc6",
+							"postInit": true
+						}
+					},
+					"subsets": { "Replicable": ["ebec872528e79fc6"] }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe025e61a7c0ef",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "HeroAccesItemAction 3",
+					"factory": "[modules:/zheroaccessoryitemaction.class].pc_entitytype",
+					"blueprint": "[modules:/zheroaccessoryitemaction.class].pc_entityblueprint",
+					"properties": {
+						"m_rAccessoryItem": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe98135d0e1f7a",
+							"postInit": true
+						},
+						"m_pDetachPoint": {
+							"type": "SEntityTemplateReference",
+							"value": "cafee17967eeda60",
+							"postInit": true
+						},
+						"m_rAccessoryItemKeyword": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe3a0f8719f8ce",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe3a0f8719f8ce",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "Keyword Newspaper",
+					"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_newspaperroll.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_item_newspaperroll.entitytemplate].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafee17967eeda60",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "Spatial Newspaper",
+					"factory": "[modules:/zspatialentity.class].pc_entitytype",
+					"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": -0.0,
+									"y": 0.0,
+									"z": 7.016475288982677e-15
+								},
+								"position": {
+									"x": 0.11572840064764024,
+									"y": 0.05888098105788231,
+									"z": 0.9929999709129332
+								}
+							}
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "ebec872528e79fc6",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe9d28008b2262",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "HeroItemAction 4",
+					"factory": "[modules:/zheroitemaction.class].pc_entitytype",
+					"blueprint": "[modules:/zheroitemaction.class].pc_entityblueprint",
+					"properties": {
+						"m_rKeywordsToFind": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe3a0f8719f8ce"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe021b5dd49dfe",
+				{
+					"parent": "ebec872528e79fc6",
+					"name": "Input_Newspaper",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddComment": {
+				"parent": "cc30b45809baeab7",
+				"name": "Notes",
+				"text": "Look here too and blueorint "
+			}
+		}
+	],
+	"patchVersion": 6
+}
