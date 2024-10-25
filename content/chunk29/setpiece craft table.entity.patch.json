@@ -24,6 +24,14 @@
 			"SubEntityOperation": [
 				"9e6b2057c759fee0",
 				{
+					"AddEventConnection": ["LH_Place", "In", "cafee9f46bba07be"]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"9e6b2057c759fee0",
+				{
 					"AddEventConnection": ["SoundEvent04", "Send", "cafe3e2a1efddbd7"]
 				}
 			]
@@ -614,16 +622,16 @@
 		},
 		{
 			"AddComment": {
-				"parent": "ebec872528e79fc6",
+				"parent": "9e6b2057c759fee0",
 				"name": "Notes",
-				"text": "No clue how inputcopying works or where the name comes from\n\nSPACEBAR IS LEAVE IS RIGHT"
+				"text": "Need to add button here?\nSee blueprint references bc sound05 cant be done apparently ask gpt\n"
 			}
 		},
 		{
 			"AddComment": {
-				"parent": "9e6b2057c759fee0",
+				"parent": "ebec872528e79fc6",
 				"name": "Notes",
-				"text": "Need to add button here?\nSee blueprint references bc sound05 cant be done apparently ask gpt\n"
+				"text": "No clue how inputcopying works or where the name comes from\n\nSPACEBAR IS LEAVE IS RIGHT\n\nNewspaper ID from game"
 			}
 		}
 	],
